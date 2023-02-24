@@ -51,7 +51,8 @@ for num in list2:
 if not PRIME_NUMBERS2:
     PRIME_NUMBERS2 = []
 
-full_check = int(0)
+# allow for alternative print endings
+FULL_CHECK = int(0)
 
 print("This program will generate two random lists and give you information about them.")
 time.sleep(2)
@@ -59,24 +60,25 @@ time.sleep(2)
 while True:
     print(f"List one contains:\n{list1}\n\nand list two contains:\n{list2}\n\n")
     time.sleep(2)
-    print("The common numbers in these lists are:")
+    print("The common numbers in these lists are:\n")
     time.sleep(1)
     print(COMMON_NUMBERS)
+    time.sleep(2)
     odd_and_even = input("Would you like to know the odd and even numbers in list 1 and 2? (y/n): ")
     if odd_and_even == 'y':
-        print("The even numbers in list one were:")
+        print("The even numbers in list one are:")
         time.sleep(1)
         print(EVEN_NUMBERS1)
         time.sleep(2)
-        print("The even numbers in list two were:")
+        print("The even numbers in list two are:")
         time.sleep(1)
         print(EVEN_NUMBERS2)
         time.sleep(2)
-        print("The odd numbers in list one were:")
+        print("The odd numbers in list one are:")
         time.sleep(1)
         print(ODD_NUMBERS1)
         time.sleep(2)
-        print("The odd numbers in list two were:")
+        print("The odd numbers in list two are:")
         time.sleep(1)
         print(ODD_NUMBERS2)
         time.sleep(2)
@@ -90,15 +92,16 @@ while True:
             time.sleep(1)
             print(PRIME_NUMBERS2)
             time.sleep(2)
-            full_check += 1
-            print(full_check)
+            FULL_CHECK += 1
+            time.sleep(1)
             break
         else:
             break
     else:
         break
 
-if full_check == 1:
+if FULL_CHECK == 1:
     print("Thank you for using this program! You've used everything I can offer.")
 else:
+    time.sleep(1)
     print("Thank's for using me!")
